@@ -48,7 +48,6 @@ download_xray() {
 }
 
 download_singbox() {
-  VERSION="1.7.0-beta.2"
   mkdir_libs "app_singbox/libs"
   dl_and_chmod arm64-v8a/libsingbox.so "https://github.com/xyysjdN/plugins/releases/download/123/sing-box-android-arm64"
   dl_and_chmod armeabi-v7a/libsingbox.so "https://github.com/xyysjdN/plugins/releases/download/123/sing-box-android-arm"
