@@ -25,9 +25,9 @@ jobs:
           key: gradle-${{ hashFiles('**/*.gradle.kts') }}
       - name: Release Build
         run: |
+          chmod +x ./gradle
           export LOCAL_PROPERTIES="${{ secrets.LOCAL_PROPERTIES }}"
           bash requirement.sh
-          chmod +x ./gradle
           dl=1 bash make.sh ${{ github.event.inputs.plugin }}
           APK=$(find . -name '*arm64-v8a*.apk')
           APK=$(dirname $APK)
