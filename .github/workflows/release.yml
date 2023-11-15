@@ -25,7 +25,6 @@ jobs:
           key: gradle-${{ hashFiles('**/*.gradle.kts') }}
       - name: Release Build
         run: |
-          chmod +x ./gradle
           export LOCAL_PROPERTIES="${{ secrets.LOCAL_PROPERTIES }}"
           bash requirement.sh
           dl=1 bash make.sh ${{ github.event.inputs.plugin }}
