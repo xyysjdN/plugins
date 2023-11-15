@@ -1,0 +1,22 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Matsuri Plugins"
+
+include ':common'
+
+include ':app_xray'
+include ':app_brook'
+include ':app_singbox'
+
+include ':app_hysteria'
+include ':app_tuic'
+
+include ':app_naive'
+include ':app_trojan-go'
+include ':app_tuic5'
+include ':app_juicity'
