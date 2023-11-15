@@ -23,6 +23,9 @@ jobs:
         with:
           path: ~/.gradlew
           key: gradle-${{ hashFiles('**/*.gradle.kts') }}
+      - name: qx
+        run: chmod +x make.sh ./gradlew
+
       - name: Release Build
         run: |
           chmod +x ./gradlew
