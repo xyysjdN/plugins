@@ -6,7 +6,6 @@ build() {
     bash make.sh "$1"
     cd ..
     rm -f app_"$1"/build/outputs/apk/release/*
-    chmod +x ./gradlew
     ./gradlew :app_"$1":assembleRelease
 }
 
